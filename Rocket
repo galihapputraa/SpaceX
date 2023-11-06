@@ -1,0 +1,5 @@
+def getBoosterVersion(data):
+    for x in data['rocket']:
+       if x:
+        response = requests.get("https://api.spacexdata.com/v4/rockets/"+str(x)).json()
+        BoosterVersion.append(response['name'])
